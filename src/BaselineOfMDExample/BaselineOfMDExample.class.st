@@ -15,11 +15,13 @@ BaselineOfMDExample >> baseline: spec [
 			"Packages"
 			spec
 				package: 'MDExample-Model';
-				package: 'MDExample-Tests' with: [ spec requires: #('MDExample-Model') ].
+				package: 'MDExample-Tests' with: [ spec requires: #('MDExample-Model') ];
+				package: 'MDExample-WebApplication' with: [ spec requires: #('MDExample-Model' 'MaterialDesignLite') ].
 
 			"Groups"
 			spec
 				group: 'Model' with: #('MDExample-Model');
+				group: 'Web' with: #('MDExample-WebApplication');
 				group: 'Tests' with: #('MDExample-Tests') ]
 ]
 
